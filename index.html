@@ -1,66 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Portafolio: Luis Rivas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio: Luis Rivas</title>
+  <meta name="description" content="Portafolio de Luis Rivas: estudiante de Ingeniería de Tecnologías y Sistemas, enfocado en desarrollo móvil y full-stack." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Luis Rivas</h1>
-        <h2>Estudiante de  Ingeniería de Técnologias y Sitemas</h2>
-    </header>
+<header class="hero">
+  <div class="hero__content">
+    <h1 class="hero__title">Luis Rivas</h1>
+    <p class="hero__subtitle">Estudiante de Ingeniería de Tecnologías y Sistemas</p>
 
-    <main>
-        <section>
-            <h3>Objetivo Profesional</h3>
-            <p>Busco especializarme en desarrollor mobile y Fullstack</p>
-        </section>
+    <nav class="hero__nav" aria-label="Secciones">
+      <a href="#objetivo">Objetivo</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 
-        <section>
-            <h3>Téconlogias de Interesés</h3>
-            <ul>
-                <li>Kotlin</li>
-                <li>Flutter</li>
-                <li>Swift</li>
-                <li>Dark</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
+  <div class="hero__avatar">
+    <img src="assets/perfil.png" alt="Foto de Luis Rivas" />
+  </div>
+</header>
 
-        </section>
-        <section>
-            <h3>Proyectos Destacados</h3>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
+  <main id="contenido">
+    <section id="objetivo" class="section">
+      <div class="container">
+        <h2>Objetivo profesional</h2>
+        <p>Busco especializarme en <strong>desarrollo móvil</strong> y <strong>full-stack</strong>.</p>
+      </div>
+    </section>
 
-        </section>
-        <section>
-            <h3>Interesés y Hobbies</h3>
-            <ul>
-                <li>Turismo</li>
-                <li>Music</li>
-                <li>Programación</li>
-                <li>Youtube</li>
-            </ul>    
+    <section id="tecnologias" class="section">
+      <div class="container">
+        <h2>Tecnologías de interés</h2>
+        <ul class="tags" aria-label="Lista de tecnologías">
+          <li>Kotlin</li>
+          <li>Flutter</li>
+          <li>Swift</li>
+          <li>Dart</li> <!-- corregido (no “Dark”) -->
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </section>
 
-        </section>
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2>Proyectos destacados</h2>
+        <ul class="projects">
+          <li>
+            <h3>Sistema de Gestión de Reparación de Automóviles </h3>
+            <p>Este es un proyecto de Java enfocado en la gestión del mantenimiento de tablas, diseñado específicamente para transacciones en un negocio de reparación de automóviles. El proyecto proporciona funcionalidades para agregar, actualizar y gestionar diferentes tablas relacionadas con las operaciones comerciales.</p>
+            <a href="https://github.com/RivasMichael/Java-Proyect" target="_blank" rel="noopener">Ver más ↗</a>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
 
-        <section>
-            <h3>Contacto</h3>
-            <p>Email: </p>
-            <p>LinkendIn: </p>
-            <p>GitHub: </p>
-        </section>
+    <section id="intereses" class="section">
+      <div class="container">
+        <h2>Intereses y hobbies</h2>
+        <ul>
+          <li>Turismo</li>
+          <li>Música</li>
+          <li>Programación</li>
+          <li>YouTube</li>
+        </ul>
+      </div>
+    </section>
 
-    </main>
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <ul class="contact">
+          <li>Email: <a href="luismichael1402@gmail.com">luismichael1402@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/michael-taype-rivas-719343375" target="_blank" rel="noopener">linkedin.com/in/michael-taype-rivas-719343375</a></li>
+          <li>GitHub: <a href="https://github.com/RivasMichael" target="_blank" rel="noopener">@RivasMichael</li>
+        </ul>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Luis Rivas</p>
-    </footer>
-    <script src="script.js"></script>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© 2024 Luis Rivas</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
