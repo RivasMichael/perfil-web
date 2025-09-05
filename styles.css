@@ -107,10 +107,62 @@ body{
   padding:16px 0; text-align:center; color:var(--muted)
 }
 
-/* ancho mayor → separa en columnas donde convenga */
-@media (min-width: 768px){
-  .projects{grid-template-columns: repeat(2, minmax(0,1fr))}
+
+
+
+
+/* ----- layout dos columnas para esta sección ----- */
+.hobbies{
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* texto | carrusel */
+  align-items: start;
+  gap: 32px;
 }
+
+/* ----- carrusel (alto consistente, sin recortes) ----- */
+.carrusel{
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16/9;           /* controla altura */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #000;             /* franjas si la imagen no llena */
+}
+
+.carrusel .imagenes{
+  display: flex;
+  height: 100%;
+  animation: autoSlide 16s linear infinite;  /* autoplay */
+}
+
+.carrusel img{
+  flex: 0 0 100%;               /* cada imagen ocupa todo el carrusel */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* NO recorta, mantiene proporción */
+  background: #000;
+}
+
+/* animación para 4 imágenes */
+@keyframes autoSlide{
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* responsive: apila texto y carrusel en móvil */
+@media (max-width: 860px){
+  .hobbies{ grid-template-columns: 1fr; }
+}
+
+
+
+
+
 /* Responsive: en móvil, todo en columna y centrado */
 @media (max-width: 860px){
   .hero{
